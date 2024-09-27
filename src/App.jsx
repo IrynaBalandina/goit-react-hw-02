@@ -3,7 +3,7 @@ import Description from './components/Description/Description';
 import Feedback from './components/Feedback/Feedback';
 import Options from './components/Options/Options';
 import { useState } from 'react';
-
+import Notifications from './components/Notifications/Notifications';
 import './App.css'
 
 function App() {
@@ -17,27 +17,32 @@ const updateFeedback = (feedbackType )=> {
   setReviews({...reviews, [feedbackType ]:reviews[feedbackType] + 1});
  };
  const totalFeedback = reviews.good + reviews.neutral + reviews.bad;
-console.log(totalFeedback);
+
   return (
-    <>
+   
       <div>
         
-      </div>
-   
-  
-      
- 
      <Description/>
+
      <Options
      updateFeedback={updateFeedback}
      />
+
+{ totalFeedback > 0 ?  
      <Feedback
      reviews = {reviews}
      totalFeedback={totalFeedback}
-     />
-    </>
-  )
-}
+     
+     /> :
+      (<Notifications
+      message = {"No feedback yet"}
+      />)}
+ 
+    
+
+</div>
+  );
+};
 
 
 export default App;

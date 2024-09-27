@@ -1,8 +1,9 @@
 
 
-const Feedback = ({reviews, totalFeedback}) => {
+const Feedback = ({reviews}) => {
     return(
 <div>
+    
     <ul>
         <li>Good:{reviews.good}</li>
         <li>Neutral:{reviews.neutral}</li>
