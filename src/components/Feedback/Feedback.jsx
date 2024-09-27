@@ -1,14 +1,15 @@
 
 
-const Feedback = () => {
+const Feedback = ({reviews}) => {
+    return(
 <div>
     <ul>
-        <li>Good:0</li>
-        <li>Neutral:0</li>
-        <li>Bad:0</li>
-        <li>Reset:0</li>
+        <li>Good:{reviews.good}</li>
+        <li>Neutral:{reviews.neutral}</li>
+        <li>Bad:{reviews.bad}</li>
+      
     </ul>
 </div>
-};
+)};
 
 export default Feedback;
