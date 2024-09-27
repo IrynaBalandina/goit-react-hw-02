@@ -16,12 +16,14 @@ const [reviews, setReviews] = useState({
 const updateFeedback = (feedbackType )=> {
   setReviews({...reviews, [feedbackType ]:reviews[feedbackType] + 1});
  };
+ const totalFeedback = reviews.good + reviews.neutral + reviews.bad;
+console.log(totalFeedback);
   return (
     <>
       <div>
         
       </div>
-
+   
   
       
  
@@ -31,6 +33,7 @@ const updateFeedback = (feedbackType )=> {
      />
      <Feedback
      reviews = {reviews}
+     totalFeedback={totalFeedback}
      />
     </>
   )

@@ -1,6 +1,6 @@
 
 
-const Feedback = ({reviews}) => {
+const Feedback = ({reviews, totalFeedback}) => {
     return(
 <div>
     <ul>
