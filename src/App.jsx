@@ -14,8 +14,8 @@ const [reviews, setReviews] = useState({
 });
 
 const updateFeedback = (feedbackType )=> {
-  setReviews({...reviews, [feedbackType ]:reviews[feedbackType] = 1})
- }
+  setReviews({...reviews, [feedbackType ]:reviews[feedbackType] + 1});
+ };
   return (
     <>
       <div>
