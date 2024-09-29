@@ -18,14 +18,26 @@ const updateFeedback = (feedbackType )=> {
  };
  const totalFeedback = reviews.good + reviews.neutral + reviews.bad;
 
+ function resetFeedback() {
+  setReviews({
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  });
+}
+ 
   return (
    
       <div>
         
      <Description/>
-
+     
+  
      <Options
      updateFeedback={updateFeedback}
+     totalFeedback={totalFeedback}
+     resetFeedback={resetFeedback}
+    
      />
 
 { totalFeedback > 0 ?  
@@ -36,10 +48,10 @@ const updateFeedback = (feedbackType )=> {
      /> :
       (<Notifications
       message = {"No feedback yet"}
-      />)}
+      />) 
+        }
  
     
-
 </div>
   );
 };
