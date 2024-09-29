@@ -25,7 +25,7 @@ const updateFeedback = (feedbackType )=> {
     bad: 0,
   });
 }
- 
+ const positiveFeedback = Math.round((reviews.good / totalFeedback) * 100);
   return (
    
       <div>
@@ -44,6 +44,7 @@ const updateFeedback = (feedbackType )=> {
      <Feedback
      reviews = {reviews}
      totalFeedback={totalFeedback}
+     positiveFeedback = {positiveFeedback}
      
      /> :
       (<Notifications
