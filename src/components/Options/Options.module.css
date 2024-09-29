@@ -1,0 +1,23 @@
+.button {
+  
+    color: blue;
+    background-color: azure;
+    cursor: pointer;
+
+}
+
+.button:hover,
+.button:focus{
+  background-color: blue;
+  color: cornsilk;
+}
+
+
+.buttonsList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 16px;
+}

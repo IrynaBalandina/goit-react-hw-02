@@ -1,15 +1,15 @@
-
+import  style from "./Feedback.module.css";
 
 const Feedback = ({reviews, positiveFeedback, totalFeedback}) => {
     return(
 <div>
     
-    <ul>
-        <li>Good:{reviews.good}</li>
-        <li>Neutral:{reviews.neutral}</li>
-        <li>Bad:{reviews.bad}</li>
-        <li>Total:{totalFeedback}</li>
-        <li>Positive:{positiveFeedback}</li>
+    <ul className ={style.list}>
+        <li className = {style.listItem}>Good:{reviews.good}</li>
+        <li className = {style.listItem}>Neutral:{reviews.neutral}</li>
+        <li className = {style.listItem}>Bad:{reviews.bad}</li>
+        <li className = {style.listItem}>Total:{totalFeedback}</li>
+        <li className = {style.listItem}>Positive:{positiveFeedback}</li>
       
     </ul>
 </div>

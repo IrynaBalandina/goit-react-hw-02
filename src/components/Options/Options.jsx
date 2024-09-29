@@ -1,15 +1,22 @@
 
-
+import style from './Options.module.css';
 
 const Options = ({updateFeedback, resetFeedback, totalFeedback}) => {
   return (
     <div>
-        <button onClick={()=>updateFeedback("good")}>Good</button>
-        <button onClick={()=>updateFeedback("neutral")}>Neutral</button>
-        <button onClick={()=>updateFeedback("bad")}>Bad</button>
+      <ul className= {style.buttonsList}>
+        <li>
+        <button className = {style.button} onClick={()=>updateFeedback("good")}>Good</button>
+        </li>
+        <li>
+        <button className = {style.button} onClick={()=>updateFeedback("neutral")}>Neutral</button>
+        </li>
+        <li>
+        <button className = {style.button} onClick={()=>updateFeedback("bad")}>Bad</button>
+        </li>
 
         {totalFeedback > 0 && (
-        <button
+        <button className = {style.button}
          
           onClick={() => {
             resetFeedback();
@@ -18,7 +25,7 @@ const Options = ({updateFeedback, resetFeedback, totalFeedback}) => {
           Reset
         </button>
       )}
-       
+     </ul>  
     </div>
     
   );
