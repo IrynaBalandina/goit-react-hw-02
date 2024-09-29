@@ -9,7 +9,7 @@ const Feedback = ({reviews, positiveFeedback, totalFeedback}) => {
         <li className = {style.listItem}>Neutral:{reviews.neutral}</li>
         <li className = {style.listItem}>Bad:{reviews.bad}</li>
         <li className = {style.listItem}>Total:{totalFeedback}</li>
-        <li className = {style.listItem}>Positive:{positiveFeedback}</li>
+        <li className = {style.listItem}>Positive:{positiveFeedback}%</li>
       
     </ul>
 </div>
